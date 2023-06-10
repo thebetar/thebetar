@@ -66,7 +66,7 @@
 
 To setup system you need the following things
 
--   VIM (already preinstalled)
+-   NVIM (https://github.com/neovim/neovim/wiki/Installing-Neovim)
     -   Gruvbox https://github.com/morhetz/gruvbox
 -   Oh my zsh https://ohmyz.sh/
     -   Agnoster theme for Oh my zsh https://github.com/agnoster/agnoster-zsh-theme
