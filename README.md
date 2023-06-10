@@ -66,7 +66,6 @@
 
 To setup system you need the following things
 
--   NVIM (https://github.com/neovim/neovim/wiki/Installing-Neovim)
-    -   Gruvbox https://github.com/morhetz/gruvbox
--   Oh my zsh https://ohmyz.sh/
-    -   Agnoster theme for Oh my zsh https://github.com/agnoster/agnoster-zsh-theme
+- Install Neovim if not already installed (https://github.com/neovim/neovim/wiki/Installing-Neovim)
+- Give permission to shellscript using `chmod u+x ./install.sh`
+- Run shell script `./install.sh`
