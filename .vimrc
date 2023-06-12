@@ -8,6 +8,9 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set splitbelow           " set horizontal split to below
+set splitright           " set vertical split to right
+
 " Open NERDTree on startup
 autocmd VimEnter * NERDTree | wincmd p
 
