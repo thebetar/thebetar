@@ -21,9 +21,9 @@ let NERDTreeShowHidden=1
 
 colorscheme gruvbox      " set color scheme
 
-autocmd TerminalWinOpen *
-  \ if &buftype == 'terminal' |
-  \   resize 20 |
-  \   setlocal termwinsize=0x140 |
-  \   setlocal nowrap |
-  \ endif
+" autocmd TerminalWinOpen *
+"  \ if &buftype == 'terminal' |
+"  \   resize 20 |
+"  \   setlocal termwinsize=0x140 |
+"  \   setlocal nowrap |
+"  \ endif
