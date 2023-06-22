@@ -1,8 +1,6 @@
-# VIM CONFIG
-
-# Add vim packages and config
-cp -r ./.vim ~/.vim
-cp ./.vimrc ~/.vimrc
+# Setup VIM configuration
+cp -r ./vim/.vim ~/.vim             # Add VIM plugins
+cp ./vim/.vimrc ~/.vimrc                # Overwrite Vim configuration
 
 # Install neovim since it does not come preinstalled
 if [ ! -f "~/.config/nvim" ]; then
