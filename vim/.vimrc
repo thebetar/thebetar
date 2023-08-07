@@ -14,6 +14,7 @@ set expandtab            " use spaces instead of tabs
 set nowrap               " disable line wrapping
 set ignorecase           " ignore case when searching
 set showcmd              " show command in bottom bar
+set incsearch            " incrementally search on keystroke
 
 set splitbelow           " set horizontal split to below
 set splitright           " set vertical split to right
