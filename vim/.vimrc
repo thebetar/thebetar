@@ -19,6 +19,8 @@ set incsearch            " incrementally search on keystroke
 set splitbelow           " set horizontal split to below
 set splitright           " set vertical split to right
 
-colorscheme gruvbox      " set color scheme
+colorscheme darkblue    " set color scheme
 
 filetype on              " enable filetype detection
+
+source ~/.vim/syntax/index.vim
