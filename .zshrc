@@ -47,6 +47,7 @@ plugins=(
     git
     git-auto-fetch
     docker 
+    z
 )
 
 # Load oh-my-zsh
