@@ -44,10 +44,14 @@ ZSH_THEME="agnoster"
 
 # Which plugins would you like to load?
 plugins=(
+    docker 
     git
     git-auto-fetch
-    docker 
+    web-search
     z
+    zsh-autosuggestions
+    zsh-interactive-cd
+    zsh-syntax-highlighting
 )
 
 # Load oh-my-zsh
