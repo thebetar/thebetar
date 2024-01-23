@@ -1,7 +1,15 @@
 # Setup VIM configuration
 echo "[Status] Setting up VIM configuration"
-cp -r ./vim/.vim/* ~/.vim                 # Add VIM plugins
-cp ./vim/.vimrc ~/.vimrc                # Overwrite Vim configuration
+cp -r "$PWD/vim/.vim/*" ~/.vim                 # Add VIM plugins
+cp "$PWD/vim/.vimrc" ~/.vimrc                # Overwrite Vim configuration
+
+# Install base deps
+echo "[Status] Installing base dependencies"
+apt install tmux
+apt install zsh
+apt install curl
+apt install git
+apt install nodejs
 
 # OH MY ZSH CONFIG
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -24,4 +32,13 @@ fi
 
 ## Copy over standard config
 echo "[Status] Copying over zsh config"
-cp ./.zshrc ~/.zshrc
+cp "$PWD/.zshrc" ~/.zshrc
+
+# Final remarks
+echo "[Status] Setup complete"
+echo "[Status] Please restart your terminal"
+echo "Todo list:"
+echo "  - Install Docker (https://docs.docker.com/engine/install/)"
+echo "  - Install VSCode (https://code.visualstudio.com/docs/setup/linux)"
+echo "  - Install Spotify (https://www.spotify.com/nl/download/linux/)"
+echo "  - Install MongoDB shell (https://www.mongodb.com/docs/mongodb-shell/install/)"
