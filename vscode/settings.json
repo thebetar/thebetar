@@ -1,0 +1,116 @@
+{
+	"workbench.startupEditor": "none",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.editorAssociations": {
+		"*.ipynb": "jupyter-notebook"
+	},
+	"javascript.suggest.autoImports": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+
+	"terminal.integrated.stickyScroll.enabled": false,
+	"editor.stickyScroll.scrollWithEditor": false,
+	"workbench.tree.enableStickyScroll": false,
+
+	"window.zoomLevel": -0.3,
+	"editor.fontSize": 12,
+	"editor.cursorSurroundingLines": 16,
+	"editor.stickyScroll.enabled": false,
+	"editor.suggestSelection": "first",
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 160,
+	"editor.unicodeHighlight.invisibleCharacters": false,
+	"eslint.format.enable": true,
+	"editor.inlineSuggest.enabled": true,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "never"
+	},
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[xml]": {
+		"editor.defaultFormatter": "redhat.vscode-xml"
+	},
+	"[c]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
+	"[cpp]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
+	"[svg]": {
+		"editor.defaultFormatter": "jock.svg"
+	},
+	"[r]": {
+		"editor.defaultFormatter": "REditorSupport.r",
+		"editor.indentSize": "tabSize",
+		"editor.tabSize": 2,
+		"editor.detectIndentation": false
+	},
+	"[octave]": {
+		"editor.defaultFormatter": "MathWorks.language-matlab"
+	},
+	"[matlab]": {
+		"editor.defaultFormatter": "MathWorks.language-matlab"
+	},
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.python",
+		"editor.formatOnType": true
+	},
+
+	"git.autofetch": true,
+	"git.openRepositoryInParentFolders": "never",
+
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"material-icon-theme.activeIconPack": "none",
+
+	"prettier.tabWidth": 4,
+	"prettier.bracketSpacing": true,
+	"prettier.singleQuote": true,
+	"prettier.semi": true,
+	"prettier.printWidth": 120,
+	"prettier.trailingComma": "all",
+	"prettier.arrowParens": "avoid",
+	"prettier.useTabs": true,
+	"prettier.quoteProps": "as-needed",
+	"prettier.documentSelectors": [".js, .css, .html, .ts"],
+
+	"npm.enableRunFromFolder": true,
+
+	"terminal.integrated.defaultProfile.linux": "zsh",
+	"terminal.integrated.fontFamily": "monospace",
+	"terminal.integrated.scrollback": 100000,
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": false,
+		"markdown": false,
+		"scminput": false
+	},
+
+	"svg.preview.mode": "svg",
+	"workbench.colorTheme": "GitHub Dark Default",
+	"cmake.configureOnOpen": false,
+	"MATLAB.installPath": "/usr/local/MATLAB/R2020b",
+	"MATLAB.telemetry": false,
+	"notebook.cellToolbarLocation": {
+		"default": "right",
+		"jupyter-notebook": "left"
+	},
+	"notebook.lineNumbers": "on"
+}

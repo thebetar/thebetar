@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+			.page-container {
+				width: 7in;
+				min-height: 9.25in;
+
+				@media print {
+					width: 100vw;
+					margin: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page-container mx-auto">
+			<div class="flex gap-x-2">
+				<div class="bg-[#333333] text-white h-full w-[300px] p-2 flex flex-col gap-4 items-center h-screen">
+					<img src="./assets/profile.jpeg" alt="Profile Picture" class="w-48 rounded-full mt-4" />
+
+					<div class="text-3xl font-semibold">Lars Vonk</div>
+
+					<div class="w-[200px] mt-4 flex flex-col gap-y-4">
+						<div>
+							<div class="text-xl font-semibold">Personal details</div>
+
+							<div class="flex text-sm flex-col gap-y-2 mt-2">
+								<div>
+									<div class="font-semibold flex gap-1">
+										<img src="./assets/email.svg" class="w-4" /> Email:
+									</div>
+									<div>info@vonkprogramming.nl</div>
+								</div>
+
+								<div>
+									<div class="font-semibold flex gap-1">
+										<img src="./assets/website.svg" class="w-4" /> Website:
+									</div>
+									<div>https://vonkprogramming.nl</div>
+								</div>
+
+								<div>
+									<div class="font-semibold flex gap-1">
+										<img src="./assets/phone.svg" class="w-4" /> Phone:
+									</div>
+									<div>+31 639119996</div>
+									<div>+48 788311059</div>
+								</div>
+
+								<div>
+									<div class="font-semibold flex gap-1">
+										<img src="./assets/house.svg" class="w-4" /> Address:
+									</div>
+									<div>Ceintuurbaan 221, 1402HJ, Bussum</div>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="text-xl font-semibold">Skills</div>
+
+							<div class="flex text-sm flex-col mt-1">
+								<div class="flex justify-between w-[200px]">
+									<div>Javascript / Typescript</div>
+									<div>9 years</div>
+								</div>
+								<div class="flex justify-between w-[200px]">
+									<div>Python</div>
+									<div>6 years</div>
+								</div>
+								<div class="flex justify-between w-[200px]">
+									<div>MongoDB</div>
+									<div>4 years</div>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="text-xl font-semibold">Education</div>
+
+							<div class="flex text-sm flex-col mt-1 gap-y-2">
+								<div class="">
+									Computer systems and networks, Warsaw University of Technology, Master's degree,
+									2023 - Now
+								</div>
+
+								<div class="">HBO-ICT, Windesheim Flevoland, Bachelor's degree, 2016-2020</div>
+
+								<div class="">Cambridge English, Cambridge University, Aug 2016</div>
+
+								<div class="">Certified ScrumMaster, Scrum Alliance, Dec 2022</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="text-xl font-semibold">Languages</div>
+
+							<div class="flex text-sm flex-col mt-1 gap-y-2">
+								<div class="flex justify-between">
+									<div>Dutch</div>
+									<div>Native / C2</div>
+								</div>
+
+								<div class="flex justify-between">
+									<div>English</div>
+									<div>Fluent / C1</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="p-4 w-[500px]">
+					<div>
+						<div class="text-2xl font-semibold">Description</div>
+						<div class="text-sm">
+							<p>
+								I am a highly motivated developer with experience in a wide range of technologies. I am
+								currently pursuing a master's degree after working for a few years as a full-stack
+								developer by a wide range of companies. Such as banks, medical companies and government
+								institutions. I love what I do which can be seen in my open source contributions and the
+								many side projects I have been working on in the past years. I like to explore the
+								newest technologies within the field and I am always looking for new ways to improve my
+								workflow or new programming languages which can improve my skillset.
+							</p>
+							<p>
+								To read a more extensive description of my work experience and skills please visit my
+								website at https://vonkprogramming.nl
+							</p>
+						</div>
+					</div>
+
+					<div class="mt-4">
+						<div class="text-2xl font-semibold">Experience</div>
+						<div class="flex flex-col gap-y-2">
+							<div>
+								<div class="text-xl">Quintor</div>
+								<div class="text-base text-slate-500 font-semibold">10-2020 - 09-2023</div>
+								<div class="text-lg text-slate-500">Full-stack developer</div>
+								<div class="text-sm">
+									At 'Quintor' in Amersfoort, Utrecht, Netherlands, from October 2020 to October 2023,
+									the role mainly involved working on various software development projects for large
+									clients like ING and different government entities. As part of the experience at
+									Quintor, a traineeship was also completed. This program emphasized learning and
+									implementing best practices for code quality through testing and linting
+									methodologies, which played a significant role in the coding projects.
+								</div>
+							</div>
+							<div>
+								<div class="text-xl">ING</div>
+								<div class="text-base text-slate-500 font-semibold">04-2022 - 09-2023</div>
+								<div class="text-lg text-slate-500">Full-stack developer</div>
+								<div class="text-sm">
+									The role at 'ING', in Amsterdam, North Holland, Netherlands, began in April 2022 and
+									is still ongoing. It primarily involves serving as a full-stack developer, working
+									on various interfaces that are utilized by ING, employing the Lit element framework.
+									In addition to these duties, for a certain period, the role also encompassed serving
+									as a product owner. This required overseeing project timelines, prioritizing
+									features, collaborating with stakeholders, and making key decisions about product
+									direction. This multi-faceted role demonstrates a blend of technical acumen and
+									leadership ability.
+								</div>
+							</div>
+							<div>
+								<div class="text-xl">SVB</div>
+								<div class="text-base text-slate-500 font-semibold">04-2021 - 04-2022</div>
+								<div class="text-lg text-slate-500">Full-stack developer</div>
+								<div class="text-sm">
+									At 'SVB', based in Amstelveen, North Holland, Netherlands, the role took place from
+									April 2021 to April 2022. The primary responsibility involved programming in
+									JavaScript, utilizing the Angular framework. An important part of the job was
+									managing a significant transition, migrating an existing system from AngularJS to
+									Angular. This migration required deep understanding of both frameworks, and
+									extensive planning to ensure a seamless transition with minimal disruption. In
+									addition to development work, the role also entailed working on pipelines, which
+									required careful oversight and management to ensure a smooth, efficient workflow and
+									continuous delivery.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
