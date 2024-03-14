@@ -9,7 +9,6 @@ apt install tmux
 apt install zsh
 apt install curl
 apt install git
-apt install nodejs
 
 # OH MY ZSH CONFIG
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -38,6 +37,7 @@ cp "$PWD/.zshrc" ~/.zshrc
 echo "[Status] Setup complete"
 echo "[Status] Please restart your terminal"
 echo "Todo list:"
+echo " -  Install nodejs (https://nodejs.org/en/download/)"
 echo "  - Install Docker (https://docs.docker.com/engine/install/)"
 echo "  - Install VSCode (https://code.visualstudio.com/docs/setup/linux)"
 echo "  - Install Spotify (https://www.spotify.com/nl/download/linux/)"
