@@ -3,10 +3,10 @@
 -   Graduated from **Windesheim Flevoland** Majored in **HBO-ICT**
 -   Working / Maintaining **Typescript** related frameworks and tools.
 -   Owner at VonkProgramming
--   Currently working at [**Quintor**](https://quintor.nl/).
+-   Currently studying at [**Politechnika Warszawska**](https://www.pw.edu.pl/).
 -   Currently working on projects for some small business owners.
 -   Publisher of multiple apps in the **Play store**
--   Notion enjoyer
+-   Ample note enjoyer
 -   Fan of **Udemy** courses.
 -   I like to help developers on **StackOverflow**.
 -   Overall nerd
@@ -66,6 +66,6 @@
 
 To setup system you need the following things
 
-- Install Neovim if not already installed (https://github.com/neovim/neovim/wiki/Installing-Neovim)
-- Give permission to shellscript using `chmod u+x ./install.sh`
-- Run shell script `./install.sh`
+-   Install Neovim if not already installed (https://github.com/neovim/neovim/wiki/Installing-Neovim)
+-   Give permission to shellscript using `chmod u+x ./install.sh`
+-   Run shell script `./install.sh`
