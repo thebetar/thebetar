@@ -1,13 +1,13 @@
 ## About me
 
+-   Currently running Debian with Regolith as my daily driver
 -   Graduated from **Windesheim Flevoland** Majored in **HBO-ICT**
 -   Working / Maintaining **Typescript** related frameworks and tools.
--   Owner at VonkProgramming
+-   Owner at [**VonkProgramming**](https://vonkprogramming.nl/)
 -   Currently studying at [**Politechnika Warszawska**](https://www.pw.edu.pl/).
 -   Currently working on projects for some small business owners.
 -   Publisher of multiple apps in the **Play store**
--   Ample note enjoyer
--   Fan of **Udemy** courses.
+-   Amplenote enjoyer
 -   I like to help developers on **StackOverflow**.
 -   Overall nerd
 
