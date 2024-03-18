@@ -33,6 +33,16 @@ fi
 echo "[Status] Copying over zsh config"
 cp "$PWD/.zshrc" ~/.zshrc
 
+# Setup custom binaries
+echo "[Status] Copying custom binaries"
+cp -r "$PWD/usr/local/bin/." /usr/local/bin
+
+# Give each binary execute permissions
+echo "[Status] Setting execute permissions"
+for file in $PWD/usr/local/bin/*; do
+  chmod 755 "/usr/local/bin/$(basename $file)"
+done
+
 # Final remarks
 echo "[Status] Setup complete"
 echo "[Status] Please restart your terminal"
