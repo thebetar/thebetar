@@ -10,6 +10,7 @@ set cursorcolumn         " highlight current column
 set background=dark      " set background style to dark
 set tabstop=2            " set tab width to 2
 set shiftwidth=2
+set scrolloff=12         " set surrounding lines around cursor
 set expandtab            " use spaces instead of tabs
 set nowrap               " disable line wrapping
 set ignorecase           " ignore case when searching
