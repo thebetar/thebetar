@@ -1,2 +1,17 @@
-selected_file=$(find ~/Projects ~/Classes /mnt/Shared/Projects /mnt/Shared/Classes -mindepth 1 -maxdepth 1 -type d | fzf)
-code $selected_file
+#!/usr/bin/env bash
+
+selected_project=$(find ~/Projects ~/Classes /mnt/Shared/Projects /mnt/Shared/Classes -mindepth 1 -maxdepth 1 -type d | fzf)
+
+selected_name=$(basename "$selected_project" | tr . _)
+tmux_running=$(pgrep tmux)
+
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -s $selected_name -c $selected_project
+    exit 0
+fi
+
+if ! tmux has-session -t=$selected_name 2> /dev/null; then
+    tmux new-session -ds $selected_name -c $selected_project
+fi
+
+tmux switch-client -t $selected_name

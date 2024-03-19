@@ -1,0 +1,2 @@
+selected_project=$(find ~/Projects ~/Classes /mnt/Shared/Projects /mnt/Shared/Classes -mindepth 1 -maxdepth 1 -type d | fzf)
+code $selected_project
