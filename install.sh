@@ -29,19 +29,21 @@ else
   echo "[Status] oh-my-zsh already installed"
 fi
 
-## Copy over standard config
+## Copy over standard zsh config
 echo "[Status] Copying over zsh config"
 cp "$PWD/.zshrc" ~/.zshrc
 
+## Copy over standard tmux config
+echo "[Status] Copying over tmux config"
+cp "$PWD/.tmux.conf" ~/.tmux.conf
+tmux source-file ~/.tmux.conf
+
 # Setup custom binaries
 echo "[Status] Copying custom binaries"
-cp -r "$PWD/usr/local/bin/." /usr/local/bin
+cp -r "$PWD/usr/local/bin/." ~/.local/bin
 
-# Give each binary execute permissions
-echo "[Status] Setting execute permissions"
-for file in $PWD/usr/local/bin/*; do
-  chmod 755 "/usr/local/bin/$(basename $file)"
-done
+# Set path to custom binaries
+export PATH="$HOME/.local/bin:$PATH"
 
 # Final remarks
 echo "[Status] Setup complete"
