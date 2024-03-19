@@ -3,6 +3,10 @@ echo "[Status] Setting up VIM configuration"
 cp -r "$PWD/vim/.vim/*" ~/.vim                 # Add VIM plugins
 cp "$PWD/vim/.vimrc" ~/.vimrc                # Overwrite Vim configuration
 
+# Setup VSCode configuration
+echo "[Status] Setting up VSCode configuration"
+cp -r "$PWD/vscode/settings.json" ~/.config/Code/User/settings.json
+
 # Install base deps
 echo "[Status] Installing base dependencies"
 apt install tmux
@@ -48,3 +52,9 @@ export PATH="$HOME/.local/bin:$PATH"
 # Final remarks
 echo "[Status] Setup complete"
 echo "[Status] Please restart your terminal"
+echo "Todo list:"
+echo " -  Install nodejs (https://nodejs.org/en/download/)"
+echo "  - Install Docker (https://docs.docker.com/engine/install/)"
+echo "  - Install VSCode (https://code.visualstudio.com/docs/setup/linux)"
+echo "  - Install Spotify (https://www.spotify.com/nl/download/linux/)"
+echo "  - Install MongoDB shell (https://www.mongodb.com/docs/mongodb-shell/install/)"

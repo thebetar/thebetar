@@ -68,4 +68,4 @@ To setup system you need the following things
 
 -   Install Neovim if not already installed (https://github.com/neovim/neovim/wiki/Installing-Neovim)
 -   Give permission to shellscript using `chmod u+x ./install.sh`
--   Run shell script `sudo ./install.sh` (sudo is needed to give binary permissions to run)
+-   Run shell script `sudo ./install.sh` for server and `sudo ./install-desktop.sh` for desktop (sudo is needed to give binary permissions to run)
