@@ -35,7 +35,7 @@ cp "$PWD/.zshrc" ~/.zshrc
 
 ## Copy over standard tmux config
 echo "[Status] Copying over tmux config"
-cp "$PWD/.tmux.conf" ~/.tmux.conf
+cp "$PWD/tmux/.tmux.conf" ~/.tmux.conf
 tmux source-file ~/.tmux.conf
 
 # Setup custom binaries
