@@ -1,3 +1,5 @@
+# W.I.P.
+
 # Setup VIM configuration
 echo "[Status] Setting up VIM configuration"
 cp -r "$PWD/vim/.vim/*" ~/.vim                 # Add VIM plugins
