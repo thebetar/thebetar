@@ -1,0 +1,8 @@
+!regolith.look.path: /usr/share/regolith-look/default
+regolith.look.path: /usr/share/regolith-look/lascaille
+
+regolith.wallpaper.file: ~/Pictures/wallpaper.jpg
+
+i3xrocks.date.format2: %Y-%m-%d %H:%M
+wm.gaps.inner.size: 0
+
