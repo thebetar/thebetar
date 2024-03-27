@@ -10,8 +10,6 @@
 	"terminal.integrated.stickyScroll.enabled": false,
 	"editor.stickyScroll.scrollWithEditor": false,
 	"workbench.tree.enableStickyScroll": false,
-
-	"window.zoomLevel": -0.3,
 	"editor.fontSize": 12,
 	"editor.cursorSurroundingLines": 16,
 	"editor.stickyScroll.enabled": false,
@@ -31,7 +29,7 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[javascript]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[json]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -106,11 +104,10 @@
 	"svg.preview.mode": "svg",
 	"workbench.colorTheme": "GitHub Dark Default",
 	"cmake.configureOnOpen": false,
-	"MATLAB.installPath": "/usr/local/MATLAB/R2020b",
 	"MATLAB.telemetry": false,
 	"notebook.cellToolbarLocation": {
 		"default": "right",
 		"jupyter-notebook": "left"
 	},
-	"notebook.lineNumbers": "on"
+	"terminal.integrated.commandsToSkipShell": ["github.copilot.terminal.suggestCommand", "matlab.interrupt"]
 }
