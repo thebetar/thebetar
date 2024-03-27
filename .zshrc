@@ -84,3 +84,24 @@ fi
 source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Tmux variable
+$default_session_name="client"
+
+# Get tmux process ID
+tmux_running=$(pgrep tmux)
+
+# Check if tmux is running (true if not running)
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -s $default_session_name -c ~
+    exit 0
+fi
+
+# Check if session exists (true if session does not exist)
+if ! tmux has-session -t=client 2> /dev/null; then
+    tmux new-session -ds $default_session_name -c ~
+fi
+
+# Switch to selected session if session exists and tmux is running
+tmux attach-session -t $default_session_name

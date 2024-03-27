@@ -40,7 +40,7 @@ tmux source-file ~/.tmux.conf
 
 # Setup custom binaries
 echo "[Status] Copying custom binaries"
-cp -r "$PWD/usr/local/bin/." ~/.local/bin
+sudo cp -r "$PWD/usr/local/bin/." ~/.local/bin
 
 # Set path to custom binaries
 export PATH="$HOME/.local/bin:$PATH"
