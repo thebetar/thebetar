@@ -86,21 +86,26 @@ source $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.z
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Early exit if opened with early exit environment variable
+if [ -n "$ZSH_EARLY_EXIT" ]; then
+    return
+fi
+
 # Tmux variable
-$default_session_name="client"
+default_session_name="client"
 
 # Get tmux process ID
 tmux_running=$(pgrep tmux)
 
 # Check if tmux is running (true if not running)
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $default_session_name -c ~
-    exit 0
+    tmux new-session -s $default_session_name
+    return
 fi
 
 # Check if session exists (true if session does not exist)
 if ! tmux has-session -t=client 2> /dev/null; then
-    tmux new-session -ds $default_session_name -c ~
+    tmux new-session -ds $default_session_name
 fi
 
 # Switch to selected session if session exists and tmux is running
