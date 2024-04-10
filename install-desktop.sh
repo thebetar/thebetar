@@ -1,62 +1,50 @@
-# W.I.P.
+source $PWD/install.sh
 
-# Setup VIM configuration
-echo "[Status] Setting up VIM configuration"
-cp -r "$PWD/vim/.vim/*" ~/.vim                 # Add VIM plugins
-cp "$PWD/vim/.vimrc" ~/.vimrc                # Overwrite Vim configuration
+# Setup NVIM
+echo "[Status] Setting up NVIM configuration"
+sudo apt install nvim
+cp -r "$DOT_FILES/nvim/." ~/.config/nvim
 
-# Setup VSCode configuration
+# Setup nodejs
+echo "[Status] Setting up NodeJS"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install 20
+
+# Setup vscode
 echo "[Status] Setting up VSCode configuration"
-cp -r "$PWD/vscode/settings.json" ~/.config/Code/User/settings.json
+sudo apt-get install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+sudo apt install apt-transport-https
+sudo apt update
+sudo apt install code
+cp -r "$DOT_FILES/vscode/." ~/.config/Code/User
 
-# Install base deps
-echo "[Status] Installing base dependencies"
-apt install tmux
-apt install zsh
-apt install curl
-apt install git
+# Install docker
+echo "[Status] Setting up Docker"
 
-# OH MY ZSH CONFIG
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  ## Install oh-my-zsh
-  echo "[Status] Installing oh-my-zsh"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-  ## Install zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
 
-  ## Install zsh-syntax-highlighting
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-  ## Install fzf
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install
-else
-  echo "[Status] oh-my-zsh already installed"
-fi
-
-## Copy over standard zsh config
-echo "[Status] Copying over zsh config"
-cp "$PWD/.zshrc" ~/.zshrc
-
-## Copy over standard tmux config
-echo "[Status] Copying over tmux config"
-cp "$PWD/.tmux.conf" ~/.tmux.conf
-tmux source-file ~/.tmux.conf
-
-# Setup custom binaries
-echo "[Status] Copying custom binaries"
-cp -r "$PWD/usr/local/bin/." ~/.local/bin
-
-# Set path to custom binaries
-export PATH="$HOME/.local/bin:$PATH"
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Final remarks
 echo "[Status] Setup complete"
 echo "[Status] Please restart your terminal"
 echo "Todo list:"
-echo " -  Install nodejs (https://nodejs.org/en/download/)"
 echo "  - Install Docker (https://docs.docker.com/engine/install/)"
-echo "  - Install VSCode (https://code.visualstudio.com/docs/setup/linux)"
 echo "  - Install Spotify (https://www.spotify.com/nl/download/linux/)"
 echo "  - Install MongoDB shell (https://www.mongodb.com/docs/mongodb-shell/install/)"

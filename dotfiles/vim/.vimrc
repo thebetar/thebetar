@@ -20,7 +20,7 @@ set incsearch            " incrementally search on keystroke
 set splitbelow           " set horizontal split to below
 set splitright           " set vertical split to right
 
-colorscheme darkblue    " set color scheme
+colorscheme desert       " set color scheme
 
 filetype on              " enable filetype detection
 

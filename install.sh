@@ -1,14 +1,16 @@
+DOT_FILES="$PWD/dotfiles"
+
 # Setup VIM configuration
 echo "[Status] Setting up VIM configuration"
-cp -r "$PWD/vim/.vim/*" ~/.vim                 # Add VIM plugins
-cp "$PWD/vim/.vimrc" ~/.vimrc                # Overwrite Vim configuration
+cp -r "$DOT_FILES/vim/.vim/." ~/.vim                 # Add VIM plugins
+cp "$DOT_FILES/vim/.vimrc" ~/.vimrc                # Overwrite Vim configuration
 
 # Install base deps
 echo "[Status] Installing base dependencies"
-apt install tmux
-apt install zsh
-apt install curl
-apt install git
+sudo apt install tmux
+sudo apt install zsh
+sudo apt install curl
+sudo apt install git
 
 # OH MY ZSH CONFIG
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -31,19 +33,16 @@ fi
 
 ## Copy over standard zsh config
 echo "[Status] Copying over zsh config"
-cp "$PWD/.zshrc" ~/.zshrc
+cp "$DOT_FILES/.zshrc" ~/.zshrc
 
 ## Copy over standard tmux config
 echo "[Status] Copying over tmux config"
-cp "$PWD/tmux/.tmux.conf" ~/.tmux.conf
+cp "$DOT_FILES/tmux/.tmux.conf" ~/.tmux.conf
 tmux source-file ~/.tmux.conf
 
 # Setup custom binaries
 echo "[Status] Copying custom binaries"
-sudo cp -r "$PWD/usr/local/bin/." ~/.local/bin
-
-# Set path to custom binaries
-export PATH="$HOME/.local/bin:$PATH"
+sudo cp -r "$DOT_FILES/usr/local/bin/." /usr/local/bin
 
 # Final remarks
 echo "[Status] Setup complete"
