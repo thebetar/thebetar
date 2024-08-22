@@ -62,19 +62,19 @@ fi
 # Tmux variable
 default_session_name="client"
 
-# Get tmux process ID
-tmux_running=$(pgrep tmux)
+# # Get tmux process ID
+# tmux_running=$(pgrep tmux)
 
-# Check if tmux is running (true if not running)
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $default_session_name
-    return
-fi
+# # Check if tmux is running (true if not running)
+# if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+#     tmux new-session -s $default_session_name
+#     return
+# fi
 
-# Check if session exists (true if session does not exist)
-if ! tmux has-session -t=client 2> /dev/null; then
-    tmux new-session -ds $default_session_name
-fi
+# # Check if session exists (true if session does not exist)
+# if ! tmux has-session -t=client 2> /dev/null; then
+#     tmux new-session -ds $default_session_name
+# fi
 
-# Switch to selected session if session exists and tmux is running
-tmux attach-session -t $default_session_name
+# # Switch to selected session if session exists and tmux is running
+# tmux attach-session -t $default_session_name
