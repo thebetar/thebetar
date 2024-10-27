@@ -1,0 +1,74 @@
+order += "wireless wlan0"
+order += "ethernet eth0"
+order += "wireless _first_"
+order += "volume master"
+order += "disk /"
+order += "battery 0"
+order += "cpu_temperature 0"
+order += "cpu_usage"
+order += "load"
+order += "tztime local"
+
+wireless wlan0 {
+        format_up = "W: (%quality at %essid, %bitrate) %ip"
+        format_down = "W: down"
+}
+
+ethernet eth0 {
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
+
+volume master {
+        format = " %volume"
+        format_muted = " "
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+disk "/" {
+	format = " %avail"
+	prefix_type	= custom
+	low_threshold = 20
+	threshold_type = percentage_avail
+}
+
+battery 0 {
+    format = "%status %percentage %remaining"
+    format_down = ""
+    last_full_capacity = true
+    integer_battery_capacity = true
+    low_threshold = 11
+    threshold_type = percentage
+    hide_seconds = true
+    status_chr = " "
+    status_bat = " "
+    status_unk = " "
+    status_full = " "
+}
+
+cpu_temperature 0 {
+	format = " %degrees°C"
+}
+
+cpu_usage {
+    format = " %usage"
+}
+
+run_watch DHCP {
+    pidfile = "/var/run/dhclient*.pid"
+}
+
+run_watch VPN {
+    pidfile = "/var/run/vpnc/pid"
+}
+
+tztime local {
+    format = "%V  %Y-%m-%d   %H:%M:%S"
+}
+
+load {
+    format = " %1min"
+}
+
