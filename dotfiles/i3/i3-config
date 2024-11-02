@@ -190,11 +190,23 @@ bar {
         colors {
                 background #222222
                 separator #777777
+
+                # set color of tabs in bar
+                focused_workspace  #010057 #010048 #FFFFFF
+                # active_workspace   #333333 #222222 #FFFFFF
+                # inactive_workspace #333333 #222222 #888888
+                # urgent_workspace   #CCCCCC #900000 #FFFFFF
+                # binding_mode       #CCCCCC #900000 #FFFFFF
         }
 }
 
+# hide title bar
+default_border normal 2
+
+client.focused #010048 #010048 #FFFFFF
+
 # make font bigger
-font pango:DejaVu Sans Mono 10
+font pango:DejaVu Sans Mono 12
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
@@ -206,4 +218,16 @@ bindsym $mod+d exec --no-startup-id gnome-control-center
 bindsym $mod+b exec --no-startup-id blueman-manager
 
 # open app menu
-bindsym $mod+space exec --no-startup-id dmenu_run
+bindsym $mod+space exec --no-startup-id rofi-new-workspace
+
+# go to next windowf
+bindsym $mod+Tab workspace next
+bindsym $mod+shift+Tab workspace prev
+
+# start nitrogen for background
+exec --no-startup-id nitrogen --restore
+
+# Screenshotting
+bindsym Print exec --no-startup-id scrot ~/Pictures/Screenshots/screenshot_%Y-%m-%d-%H%M%S.png
+bindsym Shift+Print exec --no-startup-id scrot -s ~/Pictures/Screenshots/screenshot_%Y-%m-%d-%H%M%S.png
+bindsym Ctrl+Print exec --no-startup-id scrot -u ~/Pictures/Screenshots/screenshot_%Y-%m-%d-%H%M%S.png

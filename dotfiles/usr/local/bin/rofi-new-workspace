@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Find first empty workspace
+next_workspace=$(i3-msg -t get_workspaces | jq -r '.[] | .num' | sort -n | tail -1)
+next_workspace=$((next_workspace + 1))
+
+# Create and switch to new workspace
+i3-msg "workspace number $next_workspace"
+sleep 0.1  # Wait for workspace creation
+
+# Use rofi to select an application
+selected_app=$(rofi -show drun)
+
+if [ ! -z "$selected_app" ]; then
+    # Extract the command from rofi output
+    cmd=$(echo "$selected_app" | sed 's/^.*\s\+\([^ ]\+\)$/\1/')
+    
+    # Launch app in current workspace
+    i3-msg "exec $cmd"
+fi

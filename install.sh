@@ -7,10 +7,7 @@ cp "$DOT_FILES/vim/.vimrc" ~/.vimrc                # Overwrite Vim configuration
 
 # Install base deps
 echo "[Status] Installing base dependencies"
-sudo apt install tmux
-sudo apt install zsh
-sudo apt install curl
-sudo apt install git
+sudo apt install tmux zsh curl git
 
 # OH MY ZSH CONFIG
 if [ ! -d "$HOME/.oh-my-zsh" ]; then

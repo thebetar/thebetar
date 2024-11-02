@@ -1,14 +1,11 @@
 source $PWD/install.sh
 
-# Setup NVIM
-echo "[Status] Setting up NVIM configuration"
-sudo apt install nvim
-cp -r "$DOT_FILES/nvim/." ~/.config/nvim
+DOT_FILES="$PWD/dotfiles"
 
 # Setup nodejs
 echo "[Status] Setting up NodeJS"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-nvm install 20
+nvm install --lts
 
 # Setup vscode
 echo "[Status] Setting up VSCode configuration"
@@ -20,31 +17,35 @@ rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code
+## Copying vscode settings
 cp -r "$DOT_FILES/vscode/." ~/.config/Code/User
 
 # Install docker
-echo "[Status] Setting up Docker"
-
-# Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl
+sudo apt-get install ca-certificates
 sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
-
-# Add the repository to Apt sources:
 echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+# Install i3
+echo "[Status] Install i3 window manager"
+sudo apt update
+sudo apt install i3 rofi scrot nitrogen blueman net-tools
+## Copying i3 config
+cp "$DOT_FILES/i3/i3-config" ~/.config/i3/config
+## Copying i3status config
+mkdir ~/.config/i3status
+cp "$DOT_FILES/i3/i3status-config" ~/.config/i3status/config
+## Copying rofi config
+mkdir ~/.config/rofi
+cp "$DOT_FILES/i3/rofi-config" ~/.config/rofi/config.rasi
 
 # Final remarks
 echo "[Status] Setup complete"
 echo "[Status] Please restart your terminal"
 echo "Todo list:"
-echo "  - Install Docker (https://docs.docker.com/engine/install/)"
 echo "  - Install Spotify (https://www.spotify.com/nl/download/linux/)"
-echo "  - Install MongoDB shell (https://www.mongodb.com/docs/mongodb-shell/install/)"
