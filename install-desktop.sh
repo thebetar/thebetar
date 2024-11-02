@@ -34,7 +34,7 @@ sudo apt-get update
 # Install i3
 echo "[Status] Install i3 window manager"
 sudo apt update
-sudo apt install i3 rofi scrot nitrogen blueman net-tools
+sudo apt install i3 rofi nitrogen blueman net-tools flameshot
 ## Copying i3 config
 cp "$DOT_FILES/i3/i3-config" ~/.config/i3/config
 ## Copying i3status config

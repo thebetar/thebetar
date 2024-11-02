@@ -228,6 +228,5 @@ bindsym $mod+shift+Tab workspace prev
 exec --no-startup-id nitrogen --restore
 
 # Screenshotting
-bindsym Print exec --no-startup-id scrot ~/Pictures/Screenshots/screenshot_%Y-%m-%d-%H%M%S.png
-bindsym Shift+Print exec --no-startup-id scrot -s ~/Pictures/Screenshots/screenshot_%Y-%m-%d-%H%M%S.png
-bindsym Ctrl+Print exec --no-startup-id scrot -u ~/Pictures/Screenshots/screenshot_%Y-%m-%d-%H%M%S.png
+bindsym Print exec --no-startup-id flameshot full -p ~/Pictures/Screenshots
+bindsym Shift+Print exec --no-startup-id flameshot gui
