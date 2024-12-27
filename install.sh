@@ -16,14 +16,13 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
   ## Install zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  sudo apt install zsh-autosuggestions
 
   ## Install zsh-syntax-highlighting
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  sudo apt install zsh-syntax-highlighting
 
   ## Install fzf
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install
+  sudo apt install fzf
 else
   echo "[Status] oh-my-zsh already installed"
 fi
@@ -34,7 +33,7 @@ cp "$DOT_FILES/.zshrc" ~/.zshrc
 
 ## Copy over standard tmux config
 echo "[Status] Copying over tmux config"
-cp "$DOT_FILES/tmux/.tmux.conf" ~/.tmux.conf
+cp "$DOT_FILES/.tmux.conf" ~/.tmux.conf
 tmux source-file ~/.tmux.conf
 
 # Setup custom binaries

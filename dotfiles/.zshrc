@@ -8,9 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="agnoster"
 
 # Load configurations of plugins
-source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/.fzf.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Which plugins would you like to load?
 plugins=(
@@ -19,9 +18,9 @@ plugins=(
     git-auto-fetch
     web-search
     z
-    zsh-autosuggestions
+#     zsh-autosuggestions
     zsh-interactive-cd
-    zsh-syntax-highlighting
+#     zsh-syntax-highlighting
 )
 
 # Load oh-my-zsh
