@@ -9,24 +9,6 @@ cp "$DOT_FILES/vim/.vimrc" ~/.vimrc                # Overwrite Vim configuration
 echo "[Status] Installing base dependencies"
 sudo apt install tmux zsh curl git vim -y
 
-# OH MY ZSH CONFIG
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  ## Install oh-my-zsh
-  echo "[Status] Installing oh-my-zsh"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-  ## Install zsh-autosuggestions
-  sudo apt install zsh-autosuggestions
-
-  ## Install zsh-syntax-highlighting
-  sudo apt install zsh-syntax-highlighting
-
-  ## Install fzf
-  sudo apt install fzf
-else
-  echo "[Status] oh-my-zsh already installed"
-fi
-
 ## Copy over standard zsh config
 echo "[Status] Copying over zsh config"
 cp "$DOT_FILES/.zshrc" ~/.zshrc
@@ -35,6 +17,19 @@ cp "$DOT_FILES/.zshrc" ~/.zshrc
 echo "[Status] Copying over tmux config"
 cp "$DOT_FILES/.tmux.conf" ~/.tmux.conf
 tmux source-file ~/.tmux.conf
+
+# OH MY ZSH CONFIG
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  echo "[Status] Installing oh-my-zsh"
+
+  ## Install zsh-autosuggestions
+  sudo apt install zsh-autosuggestions zsh-syntax-highlighting fzf -y
+
+  ## Install oh-my-zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+else
+  echo "[Status] oh-my-zsh already installed"
+fi
 
 # Final remarks
 echo "[Status] Setup complete"
