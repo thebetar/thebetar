@@ -7,7 +7,7 @@ cp "$DOT_FILES/vim/.vimrc" ~/.vimrc                # Overwrite Vim configuration
 
 # Install base deps
 echo "[Status] Installing base dependencies"
-sudo apt install tmux zsh curl git
+sudo apt install tmux zsh curl git vim -y
 
 # OH MY ZSH CONFIG
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -35,10 +35,6 @@ cp "$DOT_FILES/.zshrc" ~/.zshrc
 echo "[Status] Copying over tmux config"
 cp "$DOT_FILES/.tmux.conf" ~/.tmux.conf
 tmux source-file ~/.tmux.conf
-
-# Setup custom binaries
-echo "[Status] Copying custom binaries"
-sudo cp -r "$DOT_FILES/usr/local/bin/." /usr/local/bin
 
 # Final remarks
 echo "[Status] Setup complete"
