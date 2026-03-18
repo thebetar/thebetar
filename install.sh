@@ -31,6 +31,9 @@ else
   echo "[Status] oh-my-zsh already installed"
 fi
 
+# Set zsh as default shell
+chsh -s $(which zsh)
+
 # Final remarks
 echo "[Status] Setup complete"
 echo "[Status] Please restart your terminal"
