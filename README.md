@@ -1,22 +1,53 @@
 ## About me
 
--   Currently running Debian with Regolith as my daily driver
--   Graduated from **Windesheim Flevoland** Majored in **HBO-ICT**
--   Working / Maintaining **Typescript** related frameworks and tools.
--   Owner at [**VonkProgramming**](https://vonkprogramming.nl/)
--   Currently studying at [**Politechnika Warszawska**](https://www.pw.edu.pl/).
--   Currently working on projects for some small business owners.
--   Publisher of multiple apps in the **Play store**
--   Amplenote enjoyer
--   I like to help developers on **StackOverflow**.
--   Overall nerd
+- Currently running KDE Plasma on Ubuntu as my daily driver
+- Graduated from **Windesheim Flevoland** Majored in **HBO-ICT**
+- Working / Maintaining **Typescript** related frameworks and tools.
+- Owner at [**VonkProgramming**](https://vonkprogramming.nl/)
+- Currently studying at [**Politechnika Warszawska**](https://www.pw.edu.pl/).
+- Currently working on projects for some small business owners.
+- Publisher of multiple apps in the **Play store**
+- Amplenote enjoyer
+- I like to help developers on **StackOverflow**.
+- Overall nerd
+
+## Dotfiles & Setup
+
+This repository contains my personal dotfiles and machine setup scripts.
+
+### Quick start
+
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+This installs base dependencies (tmux, zsh, vim, curl, git), copies over dotfile configs, and sets up oh-my-zsh.
+
+### Contents
+
+- `install.sh` — Main setup script for a fresh machine
+- `dotfiles/` — Configuration files for vim, zsh, and tmux
+- `plasma-script.js` — KDE Plasma panel layout script (sets up top bar and side bar per screen)
+- `apply-plasma-layout.sh` — Shell wrapper that applies the Plasma layout via `qdbus`
+
+### KDE Plasma layout
+
+To manually apply the custom panel layout:
+
+```bash
+chmod +x apply-plasma-layout.sh
+./apply-plasma-layout.sh
+```
+
+This clears existing panels and creates a top bar (clock, system tray) and a left side bar (icon tasks, system monitors, app launcher) on each screen.
 
 [![Thebetar's Stack Overflow Reputation](https://img.shields.io/stackexchange/stackoverflow/r/10104786?color=orange&label=reputation&logo=stackoverflow&style=for-the-badge)](https://stackoverflow.com/users/10104786 "Thebetar's Stack Overflow Reputation")
 
 ## Contact
 
--   Email: info@vonkprogramming.nl
--   Website: https://vonkprogramming.nl
+- Email: info@vonkprogramming.nl
+- Website: https://vonkprogramming.nl
 
 ## Current Skills
 
@@ -66,6 +97,6 @@
 
 To setup system you need the following things
 
--   Install Neovim if not already installed (https://github.com/neovim/neovim/wiki/Installing-Neovim)
--   Give permission to shellscript using `chmod u+x ./install.sh`
--   Run shell script `sudo ./install.sh` for server and `sudo ./install-desktop.sh` for desktop (sudo is needed to give binary permissions to run)
+- Install Neovim if not already installed (https://github.com/neovim/neovim/wiki/Installing-Neovim)
+- Give permission to shellscript using `chmod u+x ./install.sh`
+- Run shell script `sudo ./install.sh` for server and `sudo ./install-desktop.sh` for desktop (sudo is needed to give binary permissions to run)
